@@ -1,5 +1,6 @@
 from osoba import Person
 
+
 def main():
     p1 = Person()
     p1.name = "Jan"
