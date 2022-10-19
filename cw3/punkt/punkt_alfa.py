@@ -1,3 +1,7 @@
+from __future__ import annotations
+from math import sqrt
+
+
 class Point(object):
     x: float
     y: float
@@ -12,3 +16,7 @@ class Point(object):
     def move(self, delta_x: float, delta_y: float) -> None:
         self.x += delta_x
         self.y += delta_y
+
+    @staticmethod
+    def distance(p1: Point, p2: Point) -> float:
+        return sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)

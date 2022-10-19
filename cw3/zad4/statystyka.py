@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Stat:
 
     def __init__(self, lista: List[float]) -> None:

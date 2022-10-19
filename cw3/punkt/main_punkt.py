@@ -9,5 +9,6 @@ def main():
     print(f'Wspolrzedna x: {a.x}, wspolrzedna y: {a.y}')
     print(a.__dict__)
 
+
 if __name__ == "__main__":
     main()
