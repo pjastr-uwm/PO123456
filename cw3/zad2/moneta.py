@@ -3,8 +3,8 @@ from random import randint
 
 class Coin:
 
-    def __init__(self, side: bool) -> None:
-        self.side = side
+    def __init__(self) -> None:
+        self.side = True
 
     def show_side(self):
         return self.side
