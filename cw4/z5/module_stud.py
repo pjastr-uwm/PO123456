@@ -1,4 +1,8 @@
 class Student:
+    name: str
+    surname: str
+    all: int
+    number: int
 
     def __init__(self, name: str, surname: str, all: int, number: int) -> None:
         self.name = name

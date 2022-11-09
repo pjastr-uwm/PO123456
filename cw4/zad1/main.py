@@ -2,7 +2,7 @@ from osoba import Person
 
 
 def main():
-    p1: Person = Person("Jan", "Kowalski")
+    p1: Person = Person("Jan", "Kowalski", 20)
     print(p1.age)
     Person.age = 15
     print(p1.age)

@@ -2,6 +2,8 @@ from math import pi
 
 
 class SodaCan:
+    h: float
+    r: float
 
     def __init__(self, h: float, r: float) -> None:
         self.h = h

@@ -2,6 +2,11 @@ from __future__ import annotations
 
 
 class Address:
+    zipcode: str
+    city: str
+    nr_house: int
+    street: str
+    flat: int
 
     def __init__(self, zipcode: str, city: str, nr_house: int, street: str, flat: int = 0) -> None:
         self.zipcode = zipcode

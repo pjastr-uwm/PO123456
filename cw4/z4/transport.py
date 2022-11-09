@@ -1,4 +1,7 @@
 class Car:
+    performane: float
+    max_fuel_level: float
+    current_fuel_level: float
 
     def __init__(self, performance: float, max_fuel_level: float) -> None:
         self.performane = performance
