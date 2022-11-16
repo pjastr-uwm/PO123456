@@ -1,7 +1,7 @@
 from liczby import Wymierna
 
 
-def main():
+def main() -> None:
     w1: Wymierna = Wymierna(4, 2)
     print(w1)
     print(float(w1))
@@ -23,7 +23,7 @@ def main():
     print(w2 >= w3)
     print(w2*w3)
     print(w2 / w3)
-    zero: Wymierna = Wymierna()
+    # zero: Wymierna = Wymierna()
     # print(w2/zero)
 
 

@@ -42,7 +42,7 @@ class Wymierna:
     # def __eq__(self, other: Wymierna) -> bool:
     #     return self.p == other.p and self.q == other.q
 
-    def __ne__(self, other: Wymierna) -> bool:
+    def __ne__(self, other: Wymierna) -> bool:  # type: ignore[override]
         return self.p != other.p or self.q != other.q
 
     def __lt__(self, other: Wymierna) -> bool:
@@ -57,15 +57,19 @@ class Wymierna:
     def __ge__(self, other: Wymierna) -> bool:
         return self.p * other.q >= self.q * other.p
 
-    def __mul__(self, other:Wymierna) -> Wymierna:
-        return Wymierna(self.p*other.p, self.q*other.q)
+    def __mul__(self, other: Wymierna) -> Wymierna:
+        return Wymierna(self.p * other.p, self.q * other.q)
 
-    def __truediv__(self, other:Wymierna) ->Wymierna:
+    def __truediv__(self, other: Wymierna) -> Wymierna:
         if other.p == 0:
             raise ValueError("Nie dziel przez zero!")
-        return Wymierna(self.p*other.q, self.q*other.p)
+        return Wymierna(self.p * other.q, self.q * other.p)
 
-    def __eq__(self, other:Wymierna)->bool:
-        return not(self<other) and not(other<self)
+    # def __eq__(self, other: Wymierna) -> bool:  # type: ignore[override]
+    #     return not (self < other) and not (other < self)
 
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Wymierna):
+            return NotImplemented
 
+        return self.p == other.p and self.q == other.q
