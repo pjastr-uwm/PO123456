@@ -23,7 +23,7 @@ class Osoba:
 
     @property
     def rok_urodzenia(self) -> int:
-        return  self.__rok_urodzenia
+        return self.__rok_urodzenia
 
     @rok_urodzenia.setter
     def rok_urodzenia(self, value: int) -> None:
@@ -50,9 +50,10 @@ class Pracownik(Osoba):
     __rok_zatrudnienia: int
     __pobory: int
 
-    __slots__ = ["__rok_zatrudnienia","__pobory"]
+    __slots__ = ["__rok_zatrudnienia", "__pobory"]
 
-    def __init__(self, nazwisko: str, rok_urodzenia, rok_zatrudnienia, pobory) -> None:
+    def __init__(self, nazwisko: str, rok_urodzenia, rok_zatrudnienia,
+                 pobory) -> None:
         super().__init__(nazwisko, rok_urodzenia)
         self.__rok_zatrudnienia = rok_zatrudnienia
         self.__pobory = pobory

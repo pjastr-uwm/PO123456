@@ -16,6 +16,8 @@ def main() -> None:
     print(p1.rok_zatrudnienia)
     print(p1.pobory)
     print(p1)
+    print(p1.get_ile())
+    print(Pracownik.get_ile())
 
 
 if __name__ == "__main__":
