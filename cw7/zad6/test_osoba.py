@@ -1,4 +1,4 @@
-from osoba import Osoba
+from osoba import Osoba, Pracownik
 
 
 def main() -> None:
@@ -10,6 +10,12 @@ def main() -> None:
     print(o1)
     print(Osoba.get_ile())
     print(o1.get_ile())
+    p1: Pracownik = Pracownik("Nowak",2000,2020,5000)
+    print(p1.nazwisko)
+    print(p1.rok_urodzenia)
+    print(p1.rok_zatrudnienia)
+    print(p1.pobory)
+    print(p1)
 
 
 if __name__ == "__main__":

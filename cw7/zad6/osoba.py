@@ -56,3 +56,30 @@ class Pracownik(Osoba):
         super().__init__(nazwisko, rok_urodzenia)
         self.__rok_zatrudnienia = rok_zatrudnienia
         self.__pobory = pobory
+
+    @property
+    def rok_zatrudnienia(self) -> int:
+        return self.__rok_zatrudnienia
+
+    @rok_zatrudnienia.setter
+    def rok_zatrudnienia(self, value: int) -> None:
+        self.__rok_zatrudnienia = value
+
+    @rok_zatrudnienia.deleter
+    def rok_zatrudnienia(self) -> None:
+        raise AttributeError("Nie można usunac atrybutu rok zatrudnia")
+
+    @property
+    def pobory(self) -> int:
+        return self.__pobory
+
+    @pobory.setter
+    def pobory(self, value: int) -> None:
+        self.__pobory = value
+
+    @pobory.deleter
+    def pobory(self) -> None:
+        raise AttributeError("Nie można usunac atrybutu pobory")
+
+    def __str__(self) -> str:
+        return f"{self.nazwisko} {self.rok_urodzenia} {self.rok_zatrudnienia} {self.pobory}"
