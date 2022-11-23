@@ -18,4 +18,16 @@ class Osoba:
 
     @nazwisko.deleter
     def nazwisko(self) -> None:
-        raise AttributeError("Nie można usunac atrybuty nazwisko")
+        raise AttributeError("Nie można usunac atrybutu nazwisko")
+
+    @property
+    def rok_urodzenia(self) -> int:
+        return  self.__rok_urodzenia
+
+    @rok_urodzenia.setter
+    def rok_urodzenia(self, value: int) -> None:
+        self.__rok_urodzenia = value
+
+    @rok_urodzenia.deleter
+    def rok_urodzenia(self) -> None:
+        raise AttributeError("Nie można usunac atrybutu rok urodzenia")
