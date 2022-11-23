@@ -18,6 +18,8 @@ def main() -> None:
     print(p1)
     print(p1.get_ile())
     print(Pracownik.get_ile())
+    print(p1.pobory)
+    p1.pobory = 5678
 
 
 if __name__ == "__main__":
