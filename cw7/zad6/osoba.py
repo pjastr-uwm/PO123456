@@ -54,7 +54,7 @@ class Pracownik(Osoba):
 
     def __init__(self, nazwisko: str, rok_urodzenia, rok_zatrudnienia,
                  pobory) -> None:
-        super().__init__(self, nazwisko, rok_urodzenia)
+        super().__init__(nazwisko, rok_urodzenia)
         self.__rok_zatrudnienia = rok_zatrudnienia
         self.__pobory = pobory
 
