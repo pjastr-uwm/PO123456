@@ -1,16 +1,7 @@
 package pl.uwm.zadb;
 
 class Car {
-    public Car()
-    {
 
-    }
-
-    public Car(double pojemonoscSilnika, String marka)
-    {
-        this.pojemnoscSilnika=pojemonoscSilnika;
-        this.marka=marka;
-    }
     public double getPojemnoscSilnika() {
         return pojemnoscSilnika;
     }
@@ -25,6 +16,22 @@ class Car {
 
     public void setPojemnoscSilnika(double pojemnoscSilnika) {
         this.pojemnoscSilnika = pojemnoscSilnika;
+    }
+
+    public static Car create(double pojemonoscSilnika, String marka)
+    {
+        return new Car(pojemonoscSilnika, marka);
+    }
+
+    private Car()
+    {
+
+    }
+
+    private Car(double pojemonoscSilnika, String marka)
+    {
+        this.pojemnoscSilnika=pojemonoscSilnika;
+        this.marka=marka;
     }
 
     private double pojemnoscSilnika;
