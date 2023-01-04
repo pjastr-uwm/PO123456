@@ -5,6 +5,12 @@ class Car {
     {
 
     }
+
+    public Car(double pojemonoscSilnika, String marka)
+    {
+        this.pojemnoscSilnika=pojemonoscSilnika;
+        this.marka=marka;
+    }
     public double getPojemnoscSilnika() {
         return pojemnoscSilnika;
     }
