@@ -26,5 +26,11 @@ public class OsobaTest {
         {
             System.out.println(elem);
         }
+        System.out.println("Ile");
+        for(Osoba elem: grupa)
+        {
+            System.out.println("Lat: "+elem.ileLat()+", Miesięcy: "+elem.ileMiesiecy()+
+                    ", Dni; "+elem.ileDni());
+        }
     }
 }
