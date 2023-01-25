@@ -19,6 +19,14 @@ public class Osoba implements Comparable<Osoba>, Cloneable{
                 this.dataUrodzenia.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))+"]";
     }
 
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
+    public LocalDate getDataUrodzenia() {
+        return dataUrodzenia;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
